@@ -20,12 +20,16 @@ public class Bag {
     @Column(name = "Bag_DESCRIPTION")
     private String bagDescription;
 
+    @Column(name = "Bag_check")
+    private String bagCheck;
+
     public Bag() {
     }
 
-    public Bag(long bagweight, String bagDescription) {
+    public Bag(long bagweight, String bagDescription,String bagCheck) {
         this.bagweight = bagweight;
         this.bagDescription = bagDescription;
+        this.bagCheck = bagCheck ; 
     }
 
     public long getbagweight() {
@@ -44,12 +48,23 @@ public class Bag {
         this.bagDescription = bagDescription;
     }
 
+
+    public String getbagCheck() {
+        return bagCheck;
+    }
+
+    public void setgetbagCheck(String bagCheck) {
+        this.bagCheck = bagCheck;
+    }
+
+
     @Override
     public String toString() {
-        return "Employee{" +
-                "employeeId=" + BagId +
-                ", employeeName='" + bagweight + '\'' +
-                ", employeeDescription='" + bagDescription + '\'' +
+        return "Bag{" +
+                "bagId=" + BagId +
+                ", bagweight='" + bagweight + '\'' +
+                ", bagDescription='" + bagDescription + '\'' +
+                ", bagCheck='" + bagCheck + '\'' +
                 '}';
     }
 }
