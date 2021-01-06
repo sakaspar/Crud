@@ -23,13 +23,19 @@ public class Bag {
     @Column(name = "Bag_check")
     private String bagCheck;
 
+    @Column(name = "Bag_Numbers")
+    private long bagsn;
+
     public Bag() {
+        
+
     }
 
-    public Bag(long bagweight, String bagDescription,String bagCheck) {
+    public Bag(long bagweight, String bagDescription,String bagCheck,long bagsn) {
         this.bagweight = bagweight;
         this.bagDescription = bagDescription;
         this.bagCheck = bagCheck ; 
+        this.bagsn=bagsn;
     }
 
     public long getbagweight() {
@@ -40,12 +46,25 @@ public class Bag {
         this.bagweight = x;
     }
 
+    public long getbagsn() {
+        return bagsn;
+    }
+
+    public void setbagsn(long x) {
+        this.bagsn = x;
+    }
+
+
     public String getbagDescription() {
         return bagDescription;
     }
 
     public void setbagDescription(String bagDescription) {
         this.bagDescription = bagDescription;
+    }
+
+    public long getbagId() {
+        return BagId;
     }
 
 
